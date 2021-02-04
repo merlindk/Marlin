@@ -124,14 +124,14 @@
 #define X_DIR_PIN                             55
 #define X_ENABLE_PIN                          38
 #ifndef X_CS_PIN
-  #define X_CS_PIN                            53
+  #define X_CS_PIN                            40
 #endif
 
 #define Y_STEP_PIN                            60
 #define Y_DIR_PIN                             61
 #define Y_ENABLE_PIN                          56
 #ifndef Y_CS_PIN
-  #define Y_CS_PIN                            49
+  #define Y_CS_PIN                            42
 #endif
 
 #ifndef Z_STEP_PIN
@@ -140,21 +140,21 @@
 #define Z_DIR_PIN                             48
 #define Z_ENABLE_PIN                          62
 #ifndef Z_CS_PIN
-  #define Z_CS_PIN                            40
+  #define Z_CS_PIN                            44
 #endif
 
 #define E0_STEP_PIN                           26
 #define E0_DIR_PIN                            28
 #define E0_ENABLE_PIN                         24
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN                           42
+  #define E0_CS_PIN                           53
 #endif
 
 #define E1_STEP_PIN                           36
 #define E1_DIR_PIN                            34
 #define E1_ENABLE_PIN                         30
 #ifndef E1_CS_PIN
-  #define E1_CS_PIN                           44
+  #define E1_CS_PIN                           49
 #endif
 
 //
@@ -201,19 +201,19 @@
   #define MOSFET_D_PIN                        -1
 #endif
 #ifndef RAMPS_D8_PIN
-  #define RAMPS_D8_PIN                         8
+  #define RAMPS_D8_PIN                         10
 #endif
 #ifndef RAMPS_D9_PIN
   #define RAMPS_D9_PIN                         9
 #endif
 #ifndef RAMPS_D10_PIN
-  #define RAMPS_D10_PIN                       10
+  #define RAMPS_D10_PIN                       8
 #endif
 
 #define HEATER_0_PIN               RAMPS_D10_PIN
 
 #if ENABLED(IS_RAMPS_EFB)                         // Hotend, Fan, Bed
-  #define HEATER_BED_PIN            RAMPS_D8_PIN
+  //#define HEATER_BED_PIN            RAMPS_D8_PIN
 #elif ENABLED(IS_RAMPS_EEF)                       // Hotend, Hotend, Fan
   #define HEATER_1_PIN              RAMPS_D9_PIN
 #elif ENABLED(IS_RAMPS_EEB)                       // Hotend, Hotend, Bed
